@@ -233,3 +233,124 @@ contacts {
     color: #ffffff;
     transform: translateY(-2px);
 }
+
+/* ===================== */
+/* Адаптивные брейкпоинты */
+/* ===================== */
+
+/* Mobile ≤ 767px */
+@media (max-width: 767px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    ul li {
+        padding: 8px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    skills,
+    portfolio,
+    contacts,
+    about {
+        padding: 16px;
+        max-width: 100%;
+    }
+
+    .skills-cards,
+    .portfolio-cards {
+        gap: 12px;
+        margin: 12px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .card h3 {
+        margin: 12px;
+    }
+
+    .card-img {
+        max-width: 120px;
+        margin-top: 12px;
+    }
+
+    about p {
+        font-size: 18px;
+    }
+
+    .contact-icons {
+        gap: 12px;
+    }
+
+    .contact-icons a {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* Tablet 768px–1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    header nav {
+        padding: 12px 24px;
+    }
+
+    ul {
+        gap: 16px;
+    }
+
+    .skills-cards,
+    .portfolio-cards {
+        justify-content: center;
+        gap: 16px;
+        margin: 16px;
+    }
+
+    .card {
+        width: calc(50% - 32px);
+        max-width: 320px;
+    }
+
+    .card-img {
+        max-width: 130px;
+    }
+
+    about p {
+        font-size: 20px;
+    }
+}
+
+/* Desktop ≥ 1024px (усиление значений по умолчанию) */
+@media (min-width: 1024px) {
+    .skills-cards,
+    .portfolio-cards {
+        gap: 20px;
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    .card-img {
+        max-width: 140px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
