@@ -82,13 +82,36 @@ $(function() {
 });
 
 // Предотвращение перехода по якорю и плавный скролл
-$('a[href^="#"]').on('click', function(e) {
-  e.preventDefault();
-  const target = $($(this).attr('href'));
-  if (target.length) {
-    $('html, body').animate({
-      scrollTop: target.offset().top
-    }, 600);
-  }
-});
+$(function() {
+    const headerHeight = $(".header").outerHeight() || 0;
 
+
+    $('a[href^="#"]').on('click', function(e) {
+        const targetId = $(this).attr('href');
+        const $target = $(targetId);
+
+        if ($target.length) {
+            e.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $target.offset().top - headerHeight
+            }, 600);
+
+            history.replaceState(null, null, ' ');
+        }
+    });
+
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    $(window).on('load', function() {
+        if (window.location.hash) {
+            history.replaceState(null, null, window.location.pathname);
+        }
+
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }, 50);
+    });
+});
