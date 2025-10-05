@@ -1,0 +1,22 @@
+// scss/main.scss
+@use 'utils/variables';
+
+@use 'themes/light';
+@use 'themes/dark';
+
+@use 'base/global';
+
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/hero';
+@use 'layout/about';
+@use 'layout/skills';
+@use 'layout/contacts';
+@use 'layout/portfolio';
+
+@use 'components/card';
+@use 'components/modal';
+
+
+
+

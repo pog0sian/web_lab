@@ -1,0 +1,37 @@
+@use '../utils/variables';
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: variables.$font-main;
+  color: variables.$text-color;
+  background-color: variables.$bg-color;
+  line-height: 1.6;
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: variables.$primary-color;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

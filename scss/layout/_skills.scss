@@ -1,0 +1,79 @@
+@use '../utils/variables';
+@use 'sass:color';
+
+// Skills Section
+.skills {
+  padding: 4rem 3rem;
+  text-align: center;
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+
+    &-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    &__carousel {
+      display: flex;
+      padding: 0 1rem 1rem 1rem;
+      overflow-x: auto;
+      overflow-y: visible;
+      gap: 1rem;
+
+      &__item {
+        flex: 0 0 50%;
+        box-sizing: border-box;
+
+        &-progress-bar {
+          height: 10px;
+          background: variables.$primary-color;
+          border-radius: 5px;
+          color: #000;
+          transition: width 1s ease-out;
+        }
+      }
+
+      &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  .btn {
+    background: variables.$primary-color;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: variables.$primary-color-hover;
+    }
+  }
+
+  // Responsive
+  @media (max-width: 1024px) {
+    &__content__carousel__item { flex-basis: 60%; }
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+    &__content__carousel__item { flex-basis: 80%; }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1rem;
+    &__content__carousel__item { flex-basis: 90%; }
+  }
+}

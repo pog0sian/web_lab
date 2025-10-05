@@ -1,0 +1,16 @@
+// Variables
+// Use CSS custom properties so theme switches at runtime without recompiling CSS
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$text-color: var(--text-color);
+$bg-color: var(--bg-color);
+
+$font-main: 'Inter', sans-serif;
+
+// Derived variables sourced from CSS custom properties
+$primary-color-hover: var(--primary-color-hover);
+$card-bg: var(--card-bg);
+$border-color: var(--border-color);
+$card-border-color: var(--card-border-color, var(--border-color));
+$muted-text: var(--muted-text, #777777);
+$footer-bg: var(--footer-bg, var(--secondary-color));

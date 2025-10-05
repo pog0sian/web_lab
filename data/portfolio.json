@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Weather App",
+    "description": "Веб-приложение для просмотра прогноза погоды в реальном времени с использованием OpenWeatherMap API.",
+    "link": "https://weatherapp.example.com/"
+  },
+  {
+    "id": 2,
+    "title": "Task Manager",
+    "description": "Приложение для управления задачами с возможностью добавления, редактирования и удаления задач.",
+    "link": "https://taskmanager.example.com/"
+  },
+  {
+    "id": 3,
+    "title": "Online Portfolio",
+    "description": "Личный сайт-портфолио для демонстрации проектов и навыков.",
+    "link": "https://portfolio.example.com/"
+  }
+]

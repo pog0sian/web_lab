@@ -1,97 +1,186 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+    <title>pog0sian Inc.</title>
     <meta charset="UTF-8">
-    <title>pog0sian</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сайт визитка">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </head>
+
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__logo">👋</div>
+        <nav class="header__nav">
+            <ul>
+                <li class="header__nav-item"><a href="#about">Обо мне</a></li>
+                <li class="header__nav-item"><a href="#skills">Навыки</a></li>
+                <li class="header__nav-item"><a href="#portfolio">Портфолио</a></li>
+                <li class="header__nav-item"><a href="#contacts">Контакты</a></li>
+            </ul>
 
-<header>
-    <nav>
-        <img src="images/logo.png" alt="Других лого не было :(" class="logo">
-        <ul>
-            <li><a href="#about">Обо мне</a></li>
-            <li><a href="#skills">Навыки</a></li>
-            <li><a href="#portfolio">Портфолио</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-        </ul>
-    </nav>
-</header>
+        </nav>
+        <button class="theme-toggle" aria-label="Сменить тему">🌙</button>
+    </header>
 
-<about>
-    <h2 class="section-title" id="about">Обо мне</h2>
-    <p>Я — Давид, студент, увлечённый цифровыми технологиями и современными инструментами для обучения и развития. Учёба помогает мне не только приобретать знания, но и реализовывать собственные проекты, где я могу объединять теорию с практикой. Мне близки темы цифровизации, автоматизации и создание сервисов, которые упрощают жизнь и делают процессы более удобными.</p>
-    <p>В своих проектах я стремлюсь к тому, чтобы идеи были не просто интересными, но и полезными для других. Мне нравится разрабатывать решения, которые помогают студентам и образовательным сообществам, а также исследовать новые технологии и подходы. В будущем я хочу связать карьеру с ИТ-сферой, продолжая развиваться в программировании, проектировании цифровых сервисов и создании инновационных продуктов.</p>
-</about>
-
-<skills>
-    <h2 class="section-title" id="skills">Навыки</h2>
-    <div class="skills-cards">
-        <div class="card">
-            <h3>HTML</h3>
-            <img src="images/html.png" alt="HTML" class="card-img">
-            <p>70%</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__content">
+            <p class="hero__content-location">📍Кемерово, Россия</p>
+            <h1 class="hero__content-title">
+                Я не помогу вам с<br /><span class="highlight">Вашим Проектом</span><br />
+                Даже не пытайтесь<br /><span class="highlight">Думать Об Этом</span>
+            </h1>
+            <p class="hero__content-subtitle">Если вы не поняли, то этот текст для Вас.</p>
+            <div class="hero__content-buttons">
+                <button class="btn btn--secondary" onclick="location.href='#portfolio'">Мои работы</button>
+                <button class="btn btn--primary js-feedback-open">Связаться со мной</button>
+            </div>
         </div>
-        <div class="card">
-            <h3>CSS</h3>
-            <img src="images/css.png" alt="CSS" class="card-img">
-            <p>60%</p>
+
+        <div class="hero__image">
+            <img src="dist/images/profile.png" alt=""/>
         </div>
-        <div class="card">
-            <h3>JavaScript</h3>
-            <img src="images/js.png" alt="JavaScript" class="card-img">
-            <p>50%</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about__content">
+            <h2 class="about__content-title">Обо мне</h2>
+            <p class="about__content-text">
+                Привет! Меня зовут Давид, я начинающий фронтенд разработчик из Кемерово, Россия. Я увлечен созданием
+                красивых и функциональных веб-сайтов. Моя цель - создавать проекты, которые не только выглядят
+                потрясающе, но и обеспечивают отличный пользовательский опыт.
+            </p>
+            <p class="about__content-text">
+                В свободное время я люблю изучать новые технологии, работать над личными проектами и проводить время с
+                друзьями и семьей.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills__content">
+            <h2 class="skills__content-title">Навыки</h2>
+            <div class="skills__content__carousel">
+
+                <div class="card skills__content__carousel__item">
+                    <h3 class="skills__content__carousel__item-title">HTML</h3>
+                    <div class="skills__content__carousel__item-progress">
+                        <div class="skills__content__carousel__item-progress-bar" style="width: 90%;"></div>
+                        <span class="skills__content__carousel__item-progress-text">90%</span>
+                    </div>
+                </div>
+
+                <div class="card skills__content__carousel__item">
+                    <h3 class="skills__content__carousel__item-title">CSS</h3>
+                    <div class="skills__content__carousel__item-progress">
+                        <div class="skills__content__carousel__item-progress-bar" style="width: 80%;"></div>
+                        <span class="skills__content__carousel__item-progress-text">80%</span>
+                    </div>
+                </div>
+
+                <div class="card skills__content__carousel__item">
+                    <h3 class="skills__content__carousel__item-title">JavaScript</h3>
+                    <div class="skills__content__carousel__item-progress">
+                        <div class="skills__content__carousel__item-progress-bar" style="width: 70%;"></div>
+                        <span class="skills__content__carousel__item-progress-text">70%</span>
+                    </div>
+                </div>
+
+                <div class="card skills__content__carousel__item">
+                    <h3 class="skills__content__carousel__item-title">React</h3>
+                    <div class="skills__content__carousel__item-progress">
+                        <div class="skills__content__carousel__item-progress-bar" style="width: 60%;"></div>
+                        <span class="skills__content__carousel__item-progress-text">60%</span>
+                    </div>
+                </div>
+
+                <div class="card skills__content__carousel__item">
+                    <h3 class="skills__content__carousel__item-title">Git</h3>
+                    <div class="skills__content__carousel__item-progress">
+                        <div class="skills__content__carousel__item-progress-bar" style="width: 50%;"></div>
+                        <span class="skills__content__carousel__item-progress-text">50%</span>
+                    </div>
+                </div>
+
+                <div class="card skills__content__carousel__item">
+                    <h3 class="skills__content__carousel__item-title">Figma</h3>
+                    <div class="skills__content__carousel__item-progress">
+                        <div class="skills__content__carousel__item-progress-bar" style="width: 40%;"></div>
+                        <span class="skills__content__carousel__item-progress-text">40%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills__content__carousel__buttons">
+                <button class="btn skills__content__carousel__buttons-prev">&#8592;</button>
+                <button class="btn skills__content__carousel__buttons-next">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio__content">
+            <h2 class="portfolio__content-title">Портфолио</h2>
+            <div class="portfolio__content__items"></div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="contacts">
+        <div class="contacts__content">
+            <h2 class="contacts__content-title">Контакты</h2>
+            <p class="contacts__content-text">Выберите удобный способ для связи со мной ниже:</p>
+            <ul class="contacts__content-list">
+                <li class="contacts__content-list-item">
+                    <a href="https://t.me/pog0sian" target="_blank">
+                        <img src="dist/images/icons/telegram.png" alt="Telegram" />
+                    </a>
+                </li>
+                <li class="contacts__content-list-item">
+                    <a href="https://vk.com/pog0sian" target="_blank">
+                        <img src="dist/images/icons/vk.png" alt="VK" />
+                    </a>
+                </li>
+                <li class="contacts__content-list-item">
+                    <a href="https://github.com/pog0sian" target="_blank">
+                        <img src="dist/images/icons/github.png" alt="GitHub" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Вверх">&#8679;</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 pog0sian Inc. Все права защищены.</p>
+    </footer>
+
+    <!-- Feedback Modal -->
+    <div class="modal" id="feedback-modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть">&times;</button>
+            <h2>Обратная связь</h2>
+            <form class="feedback-form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Сообщение" required></textarea>
+                <button type="submit" class="btn btn--primary">Отправить</button>
+            </form>
         </div>
     </div>
-</skills>
-
-<portfolio>
-    <h2 class="section-title" id="portfolio">Портфолио</h2>
-    <div class="portfolio-cards">
-        <div class="card">
-            <h3><a href="https://www.apple.com/" target="_blank" rel="noopener noreferrer">Apple</a></h3>
-            <img src="images/apple.png" alt="Apple" class="card-img">
-            <p>Современный адаптивный интерфейс, интерактивные элементы, быстрая загрузка и безопасность.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Google</a></h3>
-            <img src="images/google.png" alt="Google" class="card-img">
-            <p>Минималистичный дизайн, высокая скорость, поисковые функции, интеграция с сервисами и безопасность.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://www.kemsu.ru/" target="_blank" rel="noopener noreferrer">КемГУ</a></h3>
-            <img src="images/kemsu.png" alt="КемГУ" class="card-img">
-            <p>Информативная структура, удобные разделы, интеграция с сервисами, доступность и безопасность данных.</p>
-        </div>
-    </div>
-</portfolio>
-
-<contacts>
-    <h2 class="section-title" id="contacts">Контакты</h2>
-    <div class="contact-icons">
-        <a href="mailto:pog0sian@kemsu.ru" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm2 2v.01L12 13l8-6.99V6H4zm16 2.236l-8 7-8-7V18h16V8.236z"/></svg>
-        </a>
-        <a href="tel:+79234796839" aria-label="Телефон">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C5.92 22 2 18.08 2 13.5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
-        </a>
-        <a href="https://t.me/pog0sian" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9.999 16.2l-.001-3.199 6.001-5.401-7.999 3.601-3.001-1.2c-.4-.2-.4-.6.001-.8l15.999-6.4c.4-.2.8.2.7.6l-2.999 13.2c-.1.4-.5.6-.8.4l-4.001-2.4z"/></svg>
-        </a>
-        <a href="https://vk.com/pog0sian" target="_blank" rel="noopener noreferrer" aria-label="VK">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M3.5 7.5c.1 6.2 5.1 11.2 11.3 11.2h.1v-4.1c2.5.3 4.4 2.1 4.4 2.1s.4.3.7.3c.5 0 .9-.4.9-.9V7.5c0-.5-.4-.9-.9-.9H4.4c-.5 0-.9.4-.9.9zm13.2 2.1c.2-.2.3-.5.3-.8 0-.6-.5-1.1-1.1-1.1-.3 0-.6.1-.8.3l-1.2 1.2c-.2.2-.5.3-.8.3-.6 0-1.1-.5-1.1-1.1 0-.3.1-.6.3-.8l1.2-1.2c.2-.2.3-.5.3-.8 0-.6-.5-1.1-1.1-1.1-.3 0-.6.1-.8.3l-1.2 1.2c-.2.2-.5.3-.8.3-.6 0-1.1-.5-1.1-1.1 0-.3.1-.6.3-.8l1.2-1.2c.2-.2.3-.5.3-.8 0-.6-.5-1.1-1.1-1.1-.3 0-.6.1-.8.3l-1.2 1.2c-.2.2-.3.5-.3.8 0 .6.5 1.1 1.1 1.1.3 0 .6-.1.8-.3l1.2-1.2c.2-.2.5-.3.8-.3.6 0 1.1.5 1.1 1.1 0 .3-.1.6-.3.8l-1.2 1.2c-.2.2-.3.5-.3.8 0 .6.5 1.1 1.1 1.1.3 0 .6-.1.8-.3l1.2-1.2c.2-.2.5-.3.8-.3.6 0 1.1.5 1.1 1.1 0 .3-.1.6-.3.8l-1.2 1.2c-.2.2-.3.5-.3.8 0 .6.5 1.1 1.1 1.1.3 0 .6-.1.8-.3l1.2-1.2z"/></svg>
-        </a>
-    </div>
-</contacts>
-
-<footer>
-    <p>&copy; 2025 pog0sian. Все права защищены.</p>
-</footer>
 
 </body>
+
 </html>
