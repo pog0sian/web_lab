@@ -69,6 +69,8 @@ npx sass "scss/main.scss":"dist/css/main.css"
 ```bash
 npm run sass:dev
 ```
+## Деплой
+- [Ссылка на сайт](https://pog0sian.github.io/web_lab/)
 
 ## Темизация
 - Базовые токены в `themes/_light.scss` (`:root`) и `themes/_dark.scss` (`body.dark-theme`).
