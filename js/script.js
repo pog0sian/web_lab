@@ -1,5 +1,5 @@
 // Загружаем проекты из JSON и создаем карточки
-$.getJSON("../data/portfolio.json", function(data) {
+$.getJSON("data/portfolio.json", function(data) {
     let cardsHtml = '';
     data.forEach(function(project) {
         cardsHtml += `
