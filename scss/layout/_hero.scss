@@ -1,0 +1,98 @@
+@use '../utils/variables';
+
+// Hero Section
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 3rem;
+
+  &__content {
+    max-width: 800px;
+
+    &-location {
+      font-size: 1.2rem;
+      color: variables.$muted-text;
+      margin-bottom: 0.5rem;
+    }
+
+    &-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+
+      .highlight {
+        color: variables.$primary-color;
+      }
+    }
+
+    &-subtitle {
+      margin: 1rem 0 2rem;
+      font-size: 1.2rem;
+      color: variables.$muted-text;
+    }
+
+    &-buttons {
+      display: flex;
+      gap: 1rem;
+
+      .btn {
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &--primary {
+          background: variables.$primary-color;
+          color: #fff;
+
+          &:hover {
+            background: variables.$primary-color-hover;
+          }
+        }
+
+        &--secondary {
+          background: variables.$secondary-color;
+          color: #fff;
+
+          &:hover {
+            filter: brightness(0.95);
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    max-width: 600px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // Responsive
+  @media (max-width: 1024px) {
+    padding: 3.5rem 2rem;
+    &__content-title { font-size: 3rem; }
+    &__image { max-width: 520px; }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    &__content-title { font-size: 2.5rem; }
+    &__content-subtitle { font-size: 1.05rem; }
+    &__content-buttons .btn { padding: 0.7rem 1.25rem; }
+    &__image { max-width: 440px; }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1rem;
+    &__content-title { font-size: 2.1rem; }
+    &__content-subtitle { font-size: 1rem; }
+    &__image { max-width: 360px; }
+  }
+}

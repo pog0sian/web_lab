@@ -1,0 +1,12 @@
+body.dark-theme {
+  --primary-color: #6fbf73;
+  --secondary-color: #bbbbbb;
+  --text-color: #e6e6e6;
+  --bg-color: #121212;
+  --card-bg: #1a1a1a;
+  --border-color: #2a2a2a;
+  --primary-color-hover: #5aa964;
+  --card-border-color: #2e2e2e;
+  --muted-text: #a3a3a3;
+  --footer-bg: var(--primary-color); /* green footer in dark theme */
+}

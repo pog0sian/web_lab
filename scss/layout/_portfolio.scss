@@ -1,0 +1,63 @@
+@use '../utils/variables';
+
+// Portfolio Section
+.portfolio {
+  padding: 4rem 3rem;
+  text-align: center;
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    &-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+
+      .portfolio__card {
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+        }
+
+        &-description {
+          font-size: 1rem;
+          color: variables.$muted-text;
+          margin-bottom: 1rem;
+        }
+
+        &-link {
+          text-decoration: none;
+          color: variables.$primary-color;
+          &:hover {
+            color: variables.$primary-color-hover;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 1024px) {
+    &__content__items { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+    &__content__items { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1rem;
+  }
+}

@@ -1,0 +1,24 @@
+// About Section
+.about {
+  padding: 5rem 3rem;
+  text-align: center;
+
+  &__content {
+    max-width: 400px;
+    margin: 0 auto;
+
+    &-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    &-text {
+      text-align: justify-all;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #666;
+      line-height: 1.8;
+    }
+  }
+}
